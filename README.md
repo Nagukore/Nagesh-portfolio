@@ -1,5 +1,7 @@
 # Nagesh Kore | Portfolio
 
+**🌍 Live Site:** [https://nageshs.vercel.app/](https://nageshs.vercel.app/)
+
 **Welcome to my personal portfolio repository!**
 This is a modern, responsive single-page web application designed from the ground up to feature my latest software engineering projects, Artificial Intelligence background, and design aesthetics.
 
