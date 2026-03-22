@@ -18,25 +18,8 @@ I thrive on blending beautiful, modern design with robust logic to build clean, 
 
 ## ✨ Key Features
 - **Sleek Aesthetic:** Modern, premium dark-mode presentation with ambient glow and micro-animations.
-- **Dynamic Modals:** Project cards seamlessly fetch and render live, cleanly-formatted GitHub Markdown descriptions upon interaction.
+- **Dynamic Modals:** Project cards seamlessly fetch and render live, cleanly-formatted Markdown descriptions upon interaction.
 - **Interactive Forms:** Implements floating-label Material-style inputs for optimal contact outreach.
-
-## 🚀 Running Locally
-To launch a development server of this portfolio on your local machine:
-
-```bash
-# Clone the repository
-git clone https://github.com/Nagukore/Nagesh-portfolio.git
-
-# Navigate to the project directory
-cd Nagesh-portfolio
-
-# Install dependencies
-npm install
-
-# Start the dev server
-npm run dev
-```
 
 ## 📬 Contact
 - **Email:** nagesh.amcec@gmail.com
