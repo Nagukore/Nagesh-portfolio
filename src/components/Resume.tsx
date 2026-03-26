@@ -15,7 +15,7 @@ const Resume: React.FC = () => {
             <p className="resume-desc">
               Get a detailed view of my education, experience, and technical skills in a professional format.
             </p>
-            
+
             <div className="resume-actions">
               <a href="/Nageshk.pdf" download className="btn btn-primary">
                 <Download size={20} />
@@ -27,7 +27,7 @@ const Resume: React.FC = () => {
               </a>
             </div>
           </div>
-          
+
           <div className="resume-visual">
             <div className="resume-card glass-card">
               <div className="resume-icon">
@@ -42,7 +42,7 @@ const Resume: React.FC = () => {
                 </div>
                 <div className="timeline-item">
                   <div className="timeline-dot"></div>
-                  <span>10+ Full Stack Projects</span>
+                  <span>8 Full Stack Projects</span>
                 </div>
                 <div className="timeline-item">
                   <div className="timeline-dot"></div>

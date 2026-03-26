@@ -46,7 +46,10 @@
 .resume-card::before {
   content: '';
   position: absolute;
-  top: 0; right: 0; width: 100px; height: 100px;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
   background: var(--accent-gradient);
   filter: blur(50px);
   opacity: 0.3;
@@ -81,15 +84,18 @@
   text-align: left;
   border-top: 1px solid var(--surface-border);
   padding-top: 1.5rem;
+  width: fit-content;
+  margin: 0 auto;
 }
 
 .timeline-item {
   display: flex;
-  align-items: center;
-  gap: 1rem;
+  align-items: flex-start;
+  gap: 0.8rem;
   color: var(--text-secondary);
   font-size: 0.95rem;
 }
+
 
 .timeline-dot {
   width: 10px;
@@ -97,7 +103,15 @@
   background: #10b981;
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+  margin-top: 6px;
+  flex-shrink: 0;
 }
+
+.timeline-item span {
+  display: block;
+  line-height: 1.4;
+}
+
 
 @media screen and (max-width: 900px) {
   .resume-content {
@@ -111,6 +125,11 @@
   }
 
   .timeline-preview {
-    align-items: center;
+    align-items: flex-start;
+  }
+
+  .timeline-item {
+    justify-content: flex-start;
+    text-align: left;
   }
 }
