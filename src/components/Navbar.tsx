@@ -24,13 +24,13 @@ const Navbar: React.FC = () => {
   ];
 
   return (
-    <nav className={`navbar ${isScrolled ? 'scrolled glass-effect' : ''}`}>
+    <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container nav-container">
         <a href="#home" className="nav-logo">
           Nagesh<span className="heading-gradient">K</span>
         </a>
 
-        <ul className={`nav-menu ${isMobileMenuOpen ? 'active glass-effect' : ''}`}>
+        <ul className={`nav-menu ${isMobileMenuOpen ? 'active' : ''}`}>
           {navLinks.map((link) => (
             <li key={link.name} className="nav-item">
               <a 

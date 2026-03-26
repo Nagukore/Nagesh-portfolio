@@ -36,7 +36,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Ensure the app hierarchy stays above the animated background while passing clicks */
-.app-container > *:not(.bg-animation-container) {
+.app-container > main, .app-container > footer {
   position: relative;
   z-index: 10;
 }
