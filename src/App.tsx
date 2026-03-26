@@ -1,4 +1,5 @@
 import Navbar from './components/Navbar';
+import BackgroundAnimation from './components/BackgroundAnimation';
 import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
@@ -10,9 +11,7 @@ import Footer from './components/Footer';
 function App() {
   return (
     <div className="app-container">
-      {/* Background ambient glows */}
-      <div className="bg-glow-1"></div>
-      <div className="bg-glow-2"></div>
+      <BackgroundAnimation />
 
       <Navbar />
       

@@ -35,6 +35,12 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-primary);
 }
 
+/* Ensure the app hierarchy stays above the animated background while passing clicks */
+.app-container > *:not(.bg-animation-container) {
+  position: relative;
+  z-index: 10;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -145,27 +151,4 @@ ul {
   transform: translateY(-2px);
 }
 
-/* Background Gradients */
-.bg-glow-1, .bg-glow-2 {
-  position: fixed;
-  border-radius: 50%;
-  filter: blur(100px);
-  z-index: -1;
-  opacity: 0.3;
-}
 
-.bg-glow-1 {
-  top: -10%;
-  left: -10%;
-  width: 500px;
-  height: 500px;
-  background: rgba(99, 102, 241, 0.4);
-}
-
-.bg-glow-2 {
-  bottom: -10%;
-  right: -10%;
-  width: 600px;
-  height: 600px;
-  background: rgba(236, 72, 153, 0.4);
-}

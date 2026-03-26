@@ -13,16 +13,8 @@ const Projects: React.FC = () => {
       title: 'FOSYS AI Workspace',
       description: 'AI-Powered Automated Workflow Management System. Engineered a role-based workspace with task management, transcriptions, and GitHub PR integrations.\n🏆 Best Paper Award — IC-AISMART 2025\n💵 Selected for funding by State Government of Karnataka',
       tags: ['React', 'Python', 'AI', 'GitHub API'],
-      github: 'https://github.com/Nagukore/TASK-7-AI-Workspace---FOSYS-',
+      github: 'https://github.com/Nagukore/Ai-workspacein-realtime.git',
       readme: '/fosys-readme.md',
-      featured: true
-    },
-    {
-      title: 'Enterprise RAG System',
-      description: 'Built an enterprise-grade Retrieval-Augmented Generation (RAG) platform to enable context-aware question answering over custom datasets.',
-      tags: ['Python', 'LLM', 'Vector DB', 'Semantic Search'],
-      github: 'https://github.com/Nagukore/enterprise-rag-system',
-      readme: 'https://raw.githubusercontent.com/Nagukore/enterprise-rag-system/main/README.md',
       featured: true
     },
     {
@@ -43,11 +35,11 @@ const Projects: React.FC = () => {
       featured: true
     },
     {
-      title: 'GitTogether EDA',
-      description: 'Exploratory Data Analysis Tool analyzing CSV datasets using statistical summaries and visual insights (histograms, heatmaps).',
-      tags: ['Python', 'Pandas', 'Data Viz'],
-      github: 'https://github.com/Nagukore/GitTogether',
-      readme: 'https://raw.githubusercontent.com/Nagukore/GitTogether/main/README.md',
+      title: 'Enterprise RAG System',
+      description: 'Built an enterprise-grade Retrieval-Augmented Generation (RAG) platform to enable context-aware question answering over custom datasets.',
+      tags: ['Python', 'LLM', 'Vector DB', 'Semantic Search'],
+      github: 'https://github.com/Nagukore/enterprise-rag-system',
+      readme: 'https://raw.githubusercontent.com/Nagukore/enterprise-rag-system/main/README.md',
       featured: true
     },
     {
@@ -57,6 +49,14 @@ const Projects: React.FC = () => {
       github: 'https://github.com/Nagukore/wumpusgame.',
       external: 'https://nagukore.github.io/wumpusgame.',
       readme: 'https://raw.githubusercontent.com/Nagukore/wumpusgame./main/README.md',
+      featured: true
+    },
+    {
+      title: 'GitTogether EDA',
+      description: 'Exploratory Data Analysis Tool analyzing CSV datasets using statistical summaries and visual insights (histograms, heatmaps).',
+      tags: ['Python', 'Pandas', 'Data Viz'],
+      github: 'https://github.com/Nagukore/GitTogether',
+      readme: 'https://raw.githubusercontent.com/Nagukore/GitTogether/main/README.md',
       featured: true
     }
   ];
@@ -95,8 +95,8 @@ const Projects: React.FC = () => {
 
         <div className="projects-grid">
           {mainProjects.map((project, index) => (
-             <div 
-              key={index} 
+            <div
+              key={index}
               className="project-card glass-card clickable-card"
               onClick={() => openProjectModal(project)}
             >
@@ -114,14 +114,14 @@ const Projects: React.FC = () => {
                     )}
                   </div>
                 </div>
-                
+
                 <div className="project-desc">
                   {project.description.split('\n').map((line, i) => {
                     const isAchievement = line.includes('🏆') || line.includes('💵') || line.includes('📄');
                     return (
-                      <p 
-                        key={i} 
-                        style={{ 
+                      <p
+                        key={i}
+                        style={{
                           marginBottom: i < project.description.split('\n').length - 1 ? '0.8rem' : '1.5rem',
                           color: isAchievement ? '#34d399' : 'var(--text-secondary)',
                           fontWeight: isAchievement ? '500' : '400'
@@ -132,7 +132,7 @@ const Projects: React.FC = () => {
                     );
                   })}
                 </div>
-                
+
                 <div className="project-tags">
                   {project.tags.map((tag, idx) => (
                     <span key={idx} className="tag">{tag}</span>

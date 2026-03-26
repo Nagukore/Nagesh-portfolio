@@ -1,19 +1,66 @@
 import React, { useState } from 'react';
 import { Mail, MapPin, Phone, Send } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 import './Contact.css';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const mailtoLink = `mailto:nagesh.amcec@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent("Name: " + formData.name + "\nEmail: " + formData.email + "\n\n" + formData.message)}`;
-    window.location.href = mailtoLink;
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    // IMPORTANT: Replace 'YOUR_PUBLIC_KEY' with your actual EmailJS Public Key
+    // You can find this in the EmailJS Account -> API Keys section
+    const publicKey = 'QwP3R6914-GA2fwEB';
+
+    try {
+      // 1. Send notification to YOU (Owner)
+      await emailjs.send(
+        'service_8kfdoao',
+        'template_a93cw9t',
+        {
+          from_name: formData.name,
+          to_name: 'Nagesh',
+          reply_to: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        },
+        publicKey
+      );
+
+      // 2. Send Auto-Reply to the USER
+      await emailjs.send(
+        'service_8kfdoao',
+        'template_hzcfr94',
+        {
+          to_name: formData.name,
+          send_to: formData.email,
+          user_email: formData.email,
+          email: formData.email,
+          reply_to: 'nagesh.amcec@gmail.com', // So they can reply back to you
+          subject: formData.subject,
+          message: formData.message,
+        },
+        publicKey
+      );
+
+      setSubmitStatus('success');
+      setFormData({ name: '', email: '', subject: '', message: '' });
+      setTimeout(() => setSubmitStatus('idle'), 6000);
+    } catch (error) {
+      console.error('EmailJS Error:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -77,9 +124,20 @@ const Contact: React.FC = () => {
               <label htmlFor="message">Message</label>
             </div>
             
-            <button type="submit" className="btn btn-primary submit-btn">
-              <Send size={18} /> Send Message
+            <button type="submit" className="btn btn-primary submit-btn" disabled={isSubmitting}>
+              {isSubmitting ? 'Sending...' : <><Send size={18} /> Send Message</>}
             </button>
+            
+            {submitStatus === 'success' && (
+              <p className="form-success-msg" style={{ color: '#4ade80', marginTop: '1rem', textAlign: 'center' }}>
+                Message sent successfully! I'll get back to you soon.
+              </p>
+            )}
+            {submitStatus === 'error' && (
+              <p className="form-error-msg" style={{ color: '#f87171', marginTop: '1rem', textAlign: 'center' }}>
+                Failed to send message. Please try again later.
+              </p>
+            )}
           </form>
         </div>
       </div>
