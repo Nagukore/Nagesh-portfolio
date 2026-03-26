@@ -8,7 +8,7 @@ const About: React.FC = () => {
       <div className="container">
         <h2 className="section-title">About <span className="heading-gradient">Me</span></h2>
         <p className="section-subtitle">Passion. Innovation. Excellence.</p>
-        
+
         <div className="about-content">
           <div className="about-text glass-card">
             <p className="about-lead">
@@ -21,20 +21,20 @@ const About: React.FC = () => {
               Whether it's creating full-stack React architectures, developing AI-powered workflows like FOSYS, or experimenting with computer vision, I am always driven by a desire to learn, build, and deliver scalable code.
             </p>
           </div>
-          
+
           <div className="about-stats">
             <div className="stat-card glass-card">
               <div className="stat-icon"><Clock size={28} /></div>
               <h3>Fresher</h3>
               <p>Experience Level</p>
             </div>
-            
+
             <div className="stat-card glass-card">
               <div className="stat-icon"><Award size={28} /></div>
-              <h3>10+</h3>
+              <h3>8</h3>
               <p>Projects Completed</p>
             </div>
-            
+
             <div className="stat-card glass-card">
               <div className="stat-icon"><BookOpen size={28} /></div>
               <h3>B.E. AIML</h3>
