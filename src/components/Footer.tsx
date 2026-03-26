@@ -8,8 +8,9 @@ const Footer: React.FC = () => {
       <div className="container">
         <div className="footer-content">
           <div className="footer-brand">
-            <a href="#home" className="footer-logo">
-              Nagesh<span className="heading-gradient">K</span>
+            <a href="#home" className="footer-logo" style={{ display: 'flex', alignItems: 'center' }}>
+              <div className="nk-logo-mark">NK</div>
+              <div>Nagesh<span className="heading-gradient">K</span></div>
             </a>
             <p className="footer-tagline">
               Building intelligent full-stack applications and creating modern web experiences.

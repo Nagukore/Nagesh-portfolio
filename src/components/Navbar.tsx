@@ -26,8 +26,9 @@ const Navbar: React.FC = () => {
   return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container nav-container">
-        <a href="#home" className="nav-logo">
-          Nagesh<span className="heading-gradient">K</span>
+        <a href="#home" className="nav-logo" style={{ display: 'flex', alignItems: 'center' }}>
+          <div className="nk-logo-mark">NK</div>
+          <div>Nagesh<span className="heading-gradient">K</span></div>
         </a>
 
         <ul className={`nav-menu ${isMobileMenuOpen ? 'active' : ''}`}>
