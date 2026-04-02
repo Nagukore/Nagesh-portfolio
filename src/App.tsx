@@ -8,6 +8,7 @@ import Experience from './components/Experience';
 import Resume from './components/Resume';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Chatbot from './components/Chatbot';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
       </main>
 
       <Footer />
+      <Chatbot />
     </div>
   );
 }
