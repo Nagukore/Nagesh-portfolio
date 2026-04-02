@@ -20,7 +20,7 @@ const Chatbot: React.FC = () => {
       // initial greeting
       setIsTyping(true);
       setTimeout(() => {
-        setMessages([{ id: Date.now(), text: "Hi there! I'm NagiBot 🤖 Ready for some timepass or got questions about Nagesh?", sender: 'bot' }]);
+        setMessages([{ id: Date.now(), text: "Hi there! I'm NaguBot 🤖 Ready for some timepass or got questions about Nagesh?", sender: 'bot' }]);
         setIsTyping(false);
       }, 1000);
     }
@@ -60,7 +60,7 @@ const Chatbot: React.FC = () => {
       if (!input.includes('not')) return "Glad to hear that! You must be enjoying this UI. Anything you're looking for specifically?";
     }
     if (input.includes('who are you') || input.includes('what are you') || input.includes('your name')) {
-      return "I'm NagiBot! Your friendly neighborhood virtual assistant, coded up by Nagesh to answer questions and tell bad jokes.";
+      return "I'm NaguBot! Your friendly neighborhood virtual assistant, coded up by Nagesh to answer questions and tell bad jokes.";
     }
     if (input.includes('thank') || input.includes('thx')) {
       return "You're very welcome! If you love the site, don't hesitate to reach out to Nagesh directly.";
@@ -157,7 +157,7 @@ const Chatbot: React.FC = () => {
           <div className="chat-header-info">
             <div className="bot-avatar"><Bot size={20} /></div>
             <div>
-              <h3>NagiBot</h3>
+              <h3>NaguBot</h3>
               <span className="status">Online & Ready to vibe</span>
             </div>
           </div>
