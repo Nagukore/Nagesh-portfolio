@@ -20,12 +20,15 @@ const About: React.FC = () => {
             <p>
               Whether it's creating full-stack React architectures, developing AI-powered workflows like FOSYS, or experimenting with computer vision, I am always driven by a desire to learn, build, and deliver scalable code.
             </p>
+            <p>
+              Currently, I am expanding my professional expertise as a <strong>Developer Intern</strong> at <strong>ThoughtsCrest</strong> in Bengaluru, contributing to solutions in the core banking domain.
+            </p>
           </div>
 
           <div className="about-stats">
             <div className="stat-card glass-card">
               <div className="stat-icon"><Clock size={28} /></div>
-              <h3>Fresher</h3>
+              <h3>Intern</h3>
               <p>Experience Level</p>
             </div>
 

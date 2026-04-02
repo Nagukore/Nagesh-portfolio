@@ -4,9 +4,9 @@ import { Download, Eye, FileText } from 'lucide-react';
 
 const Resume: React.FC = () => {
   return (
-    <section id="resume" className="resume section-padding glass-effect">
+    <section id="resume" className="resume section-padding">
       <div className="container">
-        <h2 className="section-title"><span className="heading-gradient">Resume</span> & Experience</h2>
+        <h2 className="section-title"><span className="heading-gradient">Resume</span> & Education</h2>
         <p className="section-subtitle">My professional journey</p>
 
         <div className="resume-content">
